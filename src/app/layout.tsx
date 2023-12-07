@@ -1,8 +1,43 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { 
+  Raleway,
+  Roboto_Condensed, 
+  Reggae_One,
+  Kaushan_Script
+} from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const raleway = Raleway({ 
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--raleway',
+ })
+
+export const robotoCondensed = Roboto_Condensed({
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--roboto',
+});
+ 
+export const reggaeOne = Reggae_One({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--reggae',
+});
+
+export const kaushanScript = Kaushan_Script({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--kaushan',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +51,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={ `${raleway.variable} ${robotoCondensed.variable} ${reggaeOne.variable} ${kaushanScript.variable}` }>{children}</body>
     </html>
   )
 }

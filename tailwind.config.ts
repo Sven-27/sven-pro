@@ -7,6 +7,13 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      sm: '576px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      xxl: '1535px'
+    },
     extend: {
       colors: {
         "t-primary": "var(--txt-primary)",
@@ -17,10 +24,11 @@ const config: Config = {
         "b-secondary": "var(--bg-secondary)",
         "b-tertiary": "var(--bg-tertiary)",
       },
-      backgroundImage: {
-        "l-primary": "linear-gradient(to bottom, var(--txt-secondary), var(--txt-primary))",
-        "l-secondary": "var(--lnr-secondary)",
-        "l-tertiary": "var(--lnr-tertiary)",
+      fontFamily: {
+        "raleway": "var(--raleway)",
+        "roboto": "var(--roboto)",
+        "reggae": "var(--reggae)",
+        "kaushan": "var(--kaushan)",
       }
     },
   },

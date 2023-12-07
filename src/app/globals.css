@@ -10,8 +10,8 @@
   --bg-primary: #151515;
   --bg-secondary: #430000;
   --bg-tertiary: #242424;
-  --lnr-primary: linear-gradient(to bottom, #FF0000, #FFF);
-  --lnr-secondary: linear-gradient(to bottom, #FFF, #FF0000);
-  --lnr-tertiary: linear-gradient(to right, #FFF, #FF0000);
+  --f-primary: 'Roboto', sans-serif;
 }
+
+
 
