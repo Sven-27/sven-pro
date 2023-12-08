@@ -14,24 +14,30 @@ const config: Config = {
       xl: '1280px',
       xxl: '1535px'
     },
-    extend: {
-      colors: {
-        "t-primary": "var(--txt-primary)",
-        "t-secondary": "var(--txt-secondary)",
-        "t-tertiary": "var(--txt-tertiary)",
-        "t-quaternary": "var(--txt-accent)",
-        "b-primary": "var(--bg-primary)",
-        "b-secondary": "var(--bg-secondary)",
-        "b-tertiary": "var(--bg-tertiary)",
-      },
-      fontFamily: {
-        "raleway": "var(--raleway)",
-        "roboto": "var(--roboto)",
-        "reggae": "var(--reggae)",
-        "kaushan": "var(--kaushan)",
-      }
+    colors: {
+      "white": "#FFF",
+      "red-100": "#FF0000",
+      "red-200": "#430000",
+      "gray-100": "#BABABA",
+      "gray-200": "#6D6D6D",
+      "gray-300": "#242424",
+      "black": "#151515",
     },
+    fontFamily: {
+      "rw": "var(--raleway)",
+      "rc": "var(--roboto)",
+      "ro": "var(--reggae)",
+      "ks": "var(--kaushan)",
+    },
+    extend: {
+      backgroundImage: ({ theme }) => ({
+        'to-right': `linear-gradient(to right, ${theme('colors.white')}, ${theme('colors.red-100')})`,
+        'to-left': `linear-gradient(to left, ${theme('colors.white')}, ${theme('colors.red-100')})`,
+        'to-bottom': `linear-gradient(to bottom, ${theme('colors.red-100')}, ${theme('colors.white')})`,
+        'to-top': `linear-gradient(to top, ${theme('colors.red-100')}, ${theme('colors.white')})`,
+      }),
   },
+},
   plugins: [],
 }
 export default config
