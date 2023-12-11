@@ -6,6 +6,7 @@ import {
   Kaushan_Script
 } from 'next/font/google'
 import './globals.css'
+import Header from '../components/header/Header'
 
 const raleway = Raleway({ 
   weight: ['400', '500', '600', '700'],
@@ -51,7 +52,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ `${raleway.className} ${robotoCondensed.variable} ${reggaeOne.variable} ${kaushanScript.variable}` }>{children}</body>
+      <body className={ `${raleway.className} ${robotoCondensed.variable} ${reggaeOne.variable} ${kaushanScript.variable}` }>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }

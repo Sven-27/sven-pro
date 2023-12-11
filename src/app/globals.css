@@ -21,9 +21,9 @@
 }
 
 .text-stroke {
-  -webkit-text-stroke: 2px #FF0000;
-  text-stroke: 2px #FF0000;
-  color: transparent;
+  -webkit-text-stroke: 1px #FF0000;
+  text-stroke: 1px #FF0000;
+  color: #6D6D6D;
 }
 
 
