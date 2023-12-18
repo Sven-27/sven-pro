@@ -2,13 +2,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../../public/img/spf-logo.png';
-import star from '../../../public/img/star1.png';
 import { IoMdClose } from "react-icons/io";
-import { motion } from "framer-motion";
-import { useState } from 'react';
+import { navRoutes } from '@/data/routes';
 
-export default function Menu() {
-  const [close, setClose] = useState(false);
+
+type Props = {
+  handleClick: () => void;
+};
+
+export default function Menu({ handleClick }: Props) {
+ // initiate isNavOpen state with false
 
   return (
     <menu className="absolute top-0 left-0 w-full h-full bg-black p-6">
@@ -23,42 +26,28 @@ export default function Menu() {
         </Link>
         <IoMdClose 
           className="text-red-100 text-4xl" 
-          
+          onClick={ handleClick }
         />
       </div>
-      <nav className="mt-6 z-[10]">
-        <ul className="flex flex-col z-20 items-center gap-4">
-          <li>
-            <Link href="/">
-              <span className="text-2xl focus text-red-100">Home</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/about">
-              <span className="text-2xl focus text-red-100">About</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/experience">
-              <span className="text-2xl focus text-red-100">Experience</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/projects">
-              <span className="text-2xl focus text-red-100">Projects</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/skills">
-              <span className="text-2xl noSelect focus text-red-100">Skills</span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact">
-              <span className="text-2xl focus text-red-100">Contact</span>
-            </Link>
-          </li>
-        </ul>
+      <nav>
+            <div
+              className="px-8 py-8 text-red-100"
+               // change isNavOpen state to false to close the menu
+            >
+            </div>
+            <ul className="flex flex-col items-center justify-between min-h-[250px]">
+              {
+                navRoutes.map((route, index) => (
+                  <li key={ index }>
+                    <Link href={ route.link }>
+                      <span className="text-2xl text-red-100 hover:text-red-200">
+                        { route.name }
+                      </span>
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
       </nav>
     </menu>
   );
