@@ -2,9 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.noSelect:focus {
+    outline: none !important;
+}
+
 @layer base {
-  .body{
-    @apply bg-gray-100;
+  a{
+    @apply noSelect;
   }
 }
 
@@ -15,8 +28,9 @@
 }
 
 @layer utilities {
-  .btn {
-    @apply bg-gray-100;
+  .focus {
+    @apply focus:text-white active:text-white focus:outline-none focus:bg-none
+           active:outline-none active:bg-none;
   }
 }
 
