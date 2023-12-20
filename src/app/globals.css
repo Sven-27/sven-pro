@@ -19,6 +19,10 @@
   a{
     @apply noSelect;
   }
+
+  .rw{
+    @apply font-rw;
+  }
 }
 
 @layer components {
@@ -31,6 +35,10 @@
   .focus {
     @apply focus:text-white active:text-white focus:outline-none focus:bg-none
            active:outline-none active:bg-none;
+  }
+
+   .transition {
+    @apply ease-in-out duration-300;
   }
 }
 

@@ -1,11 +1,17 @@
 import React from 'react';
+import Head from 'next/head';
 
 export default function About() {
   return (
-    <div>
-      <h1>About Page</h1>
-      <p>Welcome to my portfolio website!</p>
-    </div>
+    <>
+    <Head>
+      <title>About Page</title>
+      <meta name="description" content="About Page" />
+    </Head>
+    <main className="bg-black h-screen">
+      <h1 className="text-white">About Page</h1>
+    </main>
+    </>
   );
 };
 

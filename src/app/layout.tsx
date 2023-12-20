@@ -1,12 +1,12 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 import { 
   Raleway,
   Roboto_Condensed, 
   Reggae_One,
   Kaushan_Script
-} from 'next/font/google'
-import './globals.css'
-import Header from '../components/header/Header'
+} from 'next/font/google';
+import '@/app/globals.css';
+import Header from '@/components/header/Header';
 
 const raleway = Raleway({ 
   weight: ['400', '500', '600', '700'],
@@ -41,8 +41,8 @@ export const kaushanScript = Kaushan_Script({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Home',
-  description: 'experience and projects',
+  title: 'Sven-Pro | Portfolio',
+  description: 'Experiences and projects of Sven-Pro',
 }
 
 export default function RootLayout({
@@ -54,7 +54,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={ `${raleway.className} ${robotoCondensed.variable} ${reggaeOne.variable} ${kaushanScript.variable}` }>
         <Header />
-        {children}
+        { children }
       </body>
     </html>
   )

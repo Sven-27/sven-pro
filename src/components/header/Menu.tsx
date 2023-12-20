@@ -11,8 +11,6 @@ type Props = {
 };
 
 export default function Menu({ handleClick }: Props) {
- // initiate isNavOpen state with false
-
   return (
     <menu className="absolute top-0 left-0 w-full h-full bg-black p-6">
       <div className="h-fit w-full flex items-center justify-between">
@@ -32,7 +30,6 @@ export default function Menu({ handleClick }: Props) {
       <nav>
             <div
               className="px-8 py-8 text-red-100"
-               // change isNavOpen state to false to close the menu
             >
             </div>
             <ul className="flex flex-col items-center justify-between min-h-[250px]">
@@ -40,7 +37,7 @@ export default function Menu({ handleClick }: Props) {
                 navRoutes.map((route, index) => (
                   <li key={ index }>
                     <Link href={ route.link }>
-                      <span className="text-2xl text-red-100 hover:text-red-200">
+                      <span className="text-2xl text-red-100 transition hover:text-gray-100">
                         { route.name }
                       </span>
                     </Link>
