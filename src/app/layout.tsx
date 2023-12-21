@@ -41,7 +41,7 @@ export const kaushanScript = Kaushan_Script({
 });
 
 export const metadata: Metadata = {
-  title: 'Sven-Pro | Portfolio',
+  title: 'Sven-Pro | Home',
   description: 'Experiences and projects of Sven-Pro',
 }
 
@@ -52,7 +52,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={ `${raleway.className} ${robotoCondensed.variable} ${reggaeOne.variable} ${kaushanScript.variable}` }>
+      <body className={`min-h-screen bg-black ${raleway.className} ${robotoCondensed.variable} ${reggaeOne.variable} ${kaushanScript.variable}` }>
         <Header />
         { children }
       </body>

@@ -12,8 +12,8 @@ type Props = {
 
 export default function Menu({ handleClick }: Props) {
   return (
-    <menu className="absolute top-0 left-0 w-full h-full bg-black p-6">
-      <div className="h-fit w-full flex items-center justify-between">
+    <menu className="absolute top-0 left-0 w-full h-full bg-black ">
+      <div className="h-fit w-full flex items-center justify-between p-6 shadow-xl shadow-red-100/20">
         <Link href="/">
           <Image
             src={ logo }
@@ -23,7 +23,7 @@ export default function Menu({ handleClick }: Props) {
           />
         </Link>
         <IoMdClose 
-          className="text-red-100 text-4xl" 
+          className="text-red-100 text-4xl md:text-5xl animate-pulse lg:hidden" 
           onClick={ handleClick }
         />
       </div>
@@ -35,9 +35,12 @@ export default function Menu({ handleClick }: Props) {
             <ul className="flex flex-col items-center justify-between min-h-[250px]">
               {
                 navRoutes.map((route, index) => (
-                  <li key={ index }>
+                  <li 
+                    key={ index }
+                    className="pb-4"
+                  >
                     <Link href={ route.link }>
-                      <span className="text-2xl text-red-100 transition hover:text-gray-100">
+                      <span className="text-2xl text-red-100 transition hover:text-gray-100 md:p-4">
                         { route.name }
                       </span>
                     </Link>

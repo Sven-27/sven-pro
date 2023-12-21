@@ -6,12 +6,15 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import Menu from './Menu';
 import { navRoutes } from '@/data/routes';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 function Header() {
+  const pathName = usePathname(); // get the current path name
+  console.log(pathName);
    const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
 
   return (
-    <header className="fixed font-rw z-5 bg-black w-full h-[6rem] px-8 flex items-center">
+    <header className="static font-rw bg-black w-full h-[6rem] px-8 flex items-center shadow-xl shadow-white/20">
       <div className="h-fit w-full flex items-center">
         <Image
           src={ logo }
@@ -35,10 +38,11 @@ function Header() {
           {
             navRoutes.map((route, index) => (
               <li key={ index }>
-                <Link href={ route.link }>
-                  <span className="text-md text-red-100 transition hover:text-gray-100">
-                    { route.name }
-                  </span>
+                <Link 
+                  href={ route.link } 
+                  className={`link ${pathName === route.link ? 'active' : ''}text-md text-red-100 transition hover:text-gray-100`}
+                >
+                  { route.name }
                 </Link>
               </li>
             ))

@@ -20,6 +20,10 @@
     @apply noSelect;
   }
 
+  .active{
+    @apply text-gray-100;
+  }
+
   .rw{
     @apply font-rw;
   }
@@ -66,4 +70,3 @@
   justify-content: space-evenly;
   align-items: center;
 }
-

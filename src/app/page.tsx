@@ -1,10 +1,10 @@
-// import Header from '@/components/header/Header';
+'use client';
+import React from 'react';
 
 export default function Home() {
   return (
-    <main className="bg-black h-full">
-       {/* <Header /> */}
-        Home
+    <main className="">
+
     </main>
   )
 }
