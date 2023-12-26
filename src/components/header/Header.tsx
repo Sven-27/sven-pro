@@ -9,8 +9,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 function Header() {
-  const pathName = usePathname(); // get the current path name
-  console.log(pathName);
+  const pathname = usePathname(); // get the current path name
+  console.log(pathname);
    const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
 
   return (
@@ -29,18 +29,20 @@ function Header() {
       <div className="flex items-center justify-between">
       <nav>
             <RxHamburgerMenu className="text-red-100 text-4xl animate-pulse lg:hidden"  onClick={() => setIsNavOpen((prev) => !prev)}/>
-        <section className="flex lg:none bg-black">
+        <div className="flex lg:none bg-black">
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}> {/* if isNavOpen state is true, show the menu */}
-            <Menu handleClick={() => setIsNavOpen((prev) => !prev)}  />
+            <Menu 
+              pathname={ pathname } 
+              handleClick={() => setIsNavOpen((prev) => !prev)}  />
           </div>
-        </section>
+        </div>
         <ul className="hidden space-x-8 lg:flex bg-black">
           {
             navRoutes.map((route, index) => (
               <li key={ index }>
                 <Link 
                   href={ route.link } 
-                  className={`link ${pathName === route.link ? 'active' : ''}text-md text-red-100 transition hover:text-gray-100`}
+                  className={`${pathname === route.link ? 'active' : 'text-red-100' } text-md transition hover:text-gray-100`}
                 >
                   { route.name }
                 </Link>

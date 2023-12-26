@@ -4,16 +4,18 @@ import Image from 'next/image';
 import logo from '../../../public/img/spf-logo.png';
 import { IoMdClose } from "react-icons/io";
 import { navRoutes } from '@/data/routes';
+import { motion } from 'framer-motion';
 
 
 type Props = {
   handleClick: () => void;
+  pathname: string;
 };
 
-export default function Menu({ handleClick }: Props) {
+export default function Menu({ handleClick, pathname }: Props) {
   return (
-    <menu className="absolute top-0 left-0 w-full h-full bg-black ">
-      <div className="h-fit w-full flex items-center justify-between p-6 shadow-xl shadow-red-100/20">
+    <menu className="absolute top-0 bottom-0 flex flex-col left-0 w-full bg-black ">
+      <div className="h-[8rem] w-full flex items-center justify-between px-6 md:px-12 shadow-xl shadow-white/20">
         <Link href="/">
           <Image
             src={ logo }
@@ -27,27 +29,40 @@ export default function Menu({ handleClick }: Props) {
           onClick={ handleClick }
         />
       </div>
-      <nav>
-            <div
-              className="px-8 py-8 text-red-100"
-            >
-            </div>
-            <ul className="flex flex-col items-center justify-between min-h-[250px]">
-              {
-                navRoutes.map((route, index) => (
-                  <li 
-                    key={ index }
-                    className="pb-4"
+      <nav className="flex justify-center h-full">
+          <ul className="flex flex-col items-center pt-12 px-16 md:px-36 w-fit bg-red-200/40 border-x border-white">
+            {
+              navRoutes.map((route, index) => (
+                <motion.li 
+                  initial={{ 
+                    opacity: 0,
+                    y: 200 
+                  }}
+                  animate={{ 
+                    opacity: 1,
+                    y: 0
+                  }}
+                  transition={{ 
+                    duration: 2,
+                  }}
+                  key={ index }
+                  className="py-4 md:py-8"
+                >
+                  <Link 
+                    href={ route.link }
+                    onClick={ handleClick }
                   >
-                    <Link href={ route.link }>
-                      <span className="text-2xl text-red-100 transition hover:text-gray-100 md:p-4">
-                        { route.name }
-                      </span>
-                    </Link>
-                  </li>
-                ))
-              }
-            </ul>
+                    <span className={`
+                      ${pathname === route.link ? 'active' : 'text-white' }
+                      text-lg md:text-3xl transition hover:text-gray-100 md:p-4`}
+                    >
+                      { route.name }
+                    </span>
+                  </Link>
+                </motion.li>
+              ))
+            }
+          </ul>
       </nav>
     </menu>
   );

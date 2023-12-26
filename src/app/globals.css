@@ -21,7 +21,7 @@
   }
 
   .active{
-    @apply text-gray-100;
+    @apply text-gray-100 underline underline-offset-4;
   }
 
   .rw{
