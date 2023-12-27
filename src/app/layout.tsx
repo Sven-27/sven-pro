@@ -52,7 +52,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`min-h-screen bg-black ${raleway.className} ${robotoCondensed.variable} ${reggaeOne.variable} ${kaushanScript.variable}` }>
+      <body className={`bg-black flex flex-col min-h-screen ${raleway.className} ${robotoCondensed.variable} ${reggaeOne.variable} ${kaushanScript.variable}` }>
         <Header />
         { children }
       </body>
