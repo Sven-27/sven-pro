@@ -7,6 +7,7 @@ import {
 } from 'next/font/google';
 import '@/app/globals.css';
 import Header from '@/components/header/Header';
+import Particles from '@/components/particles/Particles';
 
 const raleway = Raleway({ 
   weight: ['400', '500', '600', '700'],
@@ -42,7 +43,7 @@ export const kaushanScript = Kaushan_Script({
 
 export const metadata: Metadata = {
   title: 'Sven-Pro | Home',
-  description: 'Experiences and projects of Sven-Pro',
+  description: 'All about Sven-Pro and his work as a software developer.',
 }
 
 export default function RootLayout({
@@ -52,7 +53,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-black flex flex-col min-h-screen ${raleway.className} ${robotoCondensed.variable} ${reggaeOne.variable} ${kaushanScript.variable}` }>
+      <body className={`bg-transparent relative flex flex-col min-h-screen ${raleway.className} ${robotoCondensed.variable} ${reggaeOne.variable} ${kaushanScript.variable}` }>
+        <Particles /> 
         <Header />
         { children }
       </body>

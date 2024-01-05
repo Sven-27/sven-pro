@@ -2,36 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.noSelect {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.noSelect:focus {
-    outline: none !important;
-}
-
 @layer base {
   a{
     @apply noSelect;
   }
 
   .active{
-    @apply text-gray-100 underline underline-offset-4;
-  }
-
-  .rw{
-    @apply font-rw;
+    @apply text-red-100 underline underline-offset-8 cursor-default animate-pulse;
   }
 }
 
 @layer components {
   .btn {
-    @apply bg-gray-100;
+    @apply bg-white;
   }
 }
 
@@ -44,12 +27,10 @@
    .transition {
     @apply ease-in-out duration-300;
   }
-}
 
-.text-stroke {
-  -webkit-text-stroke: 1px #FF0000;
-  text-stroke: 1px #FF0000;
-  color: #6D6D6D;
+  .overlay {
+    @apply  inset-0 bg-black opacity-70;
+  }
 }
 
 .hideMenuNav {
@@ -69,4 +50,17 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.noSelect:focus {
+    outline: none !important;
 }

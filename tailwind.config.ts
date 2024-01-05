@@ -19,7 +19,7 @@ const config: Config = {
       "gray-100": "#BABABA",
       "gray-200": "#6D6D6D",
       "gray-300": "#242424",
-      "black": "#151515",
+      "black": "#000",
     },
     fontFamily: {
       "rw": "var(--raleway)",

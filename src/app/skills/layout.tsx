@@ -10,7 +10,7 @@ export default function SkillsLayout({
 }: {
   children: React.ReactNode
 }) {
-  return <section>
+  return <main>
     { children }
-    </section>
+    </main>
 }
