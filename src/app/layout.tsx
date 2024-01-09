@@ -53,7 +53,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`bg-transparent relative flex flex-col min-h-screen ${raleway.className} ${robotoCondensed.variable} ${reggaeOne.variable} ${kaushanScript.variable}` }>
+      <body className={`container bg-transparent relative flex flex-col min-h-screen ${raleway.className} ${robotoCondensed.variable} ${reggaeOne.variable} ${kaushanScript.variable}` }>
         <Particles /> 
         <Header />
         { children }

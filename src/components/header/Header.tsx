@@ -15,7 +15,7 @@ function Header() {
    const [isNavOpen, setIsNavOpen] = useState<Boolean>(false); // initiate isNavOpen state with false
 
   return (
-    <header className="font-rw  w-full h-[6rem] px-5 md:px-8 flex items-center justify-between z-3">
+    <header className="font-rw w-full h-[6rem]  flex items-center justify-between z-3">
       <Link 
         href="/"
         className={`${pathname === '/' ? 'cursor-default' : 'text-white' } h-fit flex items-center`}

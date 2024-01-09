@@ -6,7 +6,6 @@ import { IoMdClose } from "react-icons/io";
 import { navRoutes } from '@/data/routes';
 import { motion } from 'framer-motion';
 
-
 type Props = {
   handleClick: () => void;
   pathname: string;
@@ -14,7 +13,7 @@ type Props = {
 
 export default function Menu({ handleClick, pathname }: Props) {
   return (
-    <menu className="absolute top-0 bottom-0 flex flex-col left-0 w-full bg-black ">
+    <menu className="absolute top-0 bottom-0 flex flex-col left-0 w-full  bg-black">
       <div className="h-[6rem] w-full flex items-center justify-between px-6 md:px-12 shadow-xl shadow-white/20">
         <Link href="/">
           <Image
