@@ -4,17 +4,17 @@ import { Cursor, useTypewriter } from 'react-simple-typewriter';
 export default function Typewriter() {
     const [text] = useTypewriter({
     words: [
-      'Software engineer',
-      'Web developer',
-      'Front-end developer',
-      'Back-end developer',
-      'Full-stack developer',
+      '<p>Just a guy who loves to code</p>',
+      'And create beautiful websites',
+      'With React.js, Next.js and TailwindCSS',
+      'If this is what you are looking for!',
+      'Just contact me and find me on LinkedIn!',
     ],
     loop: false,
   })
 
   return (
-    <div className="text-white text-center">
+    <div className="block text-center mt-2 text-gray-100">
       { text }
        <Cursor />
     </div>

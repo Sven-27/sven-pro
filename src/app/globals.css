@@ -7,6 +7,10 @@
     @apply noSelect;
   }
 
+  h1, h2, h3, h4{
+    @apply font-rc;
+  }
+
   .active{
     @apply text-red-100 underline underline-offset-8 cursor-default animate-pulse;
   }
