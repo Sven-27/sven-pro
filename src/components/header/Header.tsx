@@ -34,7 +34,7 @@ function Header() {
       <nav
         className="flex items-center justify-between"
       >
-            <RxHamburgerMenu className="text-red-100 text-4xl animate-pulse lg:hidden"  onClick={() => setIsNavOpen((prev) => !prev)}/>
+            <RxHamburgerMenu className="text-red-100 text-4xl lg:hidden"  onClick={() => setIsNavOpen((prev) => !prev)}/>
         <div className="flex lg:none bg-black">
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}> {/* if isNavOpen state is true, show the menu */}
             <Menu 
