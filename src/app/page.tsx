@@ -15,12 +15,12 @@ export default function Home() {
         alt="Picture of the author"
         width={150}
         height={150}
-        className="rounded-full border border-white mt-8" 
+        className="rounded-full border border-white mt-8 md:mt-16 md:w-56 md:h-56" 
       />
-      <h1 className="text-white font-bold text-center text-3xl pt-10">
-        I am <span className="block text-4xl">Sven Notermans</span>
+      <h1 className="text-white font-bold text-center text-3xl md:text-6xl pt-10 md:pt-16">
+        I am <span className="block md:inline text-4xl md:text-6xl">Sven Notermans</span>
       </h1>
-      <h2 className="w-screen text-center text-red-100 font-bold mt-2">Software engineer&nbsp;
+      <h2 className="text-center text-red-100 font-bold mt-2 md:mt-3 md:text-3xl">Software engineer&nbsp;
         <symbol className="text-white">&#64;</symbol>
         &nbsp;Sven-Pro&nbsp;
         <symbol className="text-white">&#38;</symbol>
@@ -28,23 +28,23 @@ export default function Home() {
       </h2>
       <Typewriter />
       <Link href="https://www.linkedin.com/in/sven-notermans" className="flex justify-center mt-8">
-        <TiStar className="text-[3rem] text-red-100 animate-pulse" />
-        <p className='flex flex-col text-[2rem] text-white font-ks mx-3'>
+        <TiStar className="star" />
+        <p className='flex flex-col text-[2rem] md:text-5xl text-white font-ks mx-3'>
           Let&#10076;s connect&#x21;
-          <span className="flex justify-center items-center text-gray-100 font-ks text-[1rem]">
-            <FaChevronLeft className="text-[1rem] text-red-100" />
+          <span className="flex justify-center items-center text-gray-100 font-ks text-base md:text-2xl md:mt-2">
+            <FaChevronLeft className="chevron" />
             &nbsp;On LinkedIn
             <span className="text-red-100">&nbsp;/</span>
-            <FaChevronRight className="text-red-100" />
+            <FaChevronRight className="chevron" />
           </span>
         </p>
-        <TiStar className="text-[3rem] text-red-100 animate-pulse" />
+        <TiStar className="star" />
       </Link>
       <Link 
         href="/contact" 
-        className="flex justify-center mt-12 text-white font-semi-bold p-[1px] rounded-xl bg-to-bottom"
+        className="btn"
       >
-        <span className="py-3 px-4 bg-black rounded-xl">
+        <span className="py-3 px-4 md:py-5 md:px-6 bg-black rounded-xl md:text-2xl">
          Contact Me 
         </span>
       </Link>

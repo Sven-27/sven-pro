@@ -13,23 +13,23 @@ type Props = {
 
 export default function Menu({ handleClick, pathname }: Props) {
   return (
-    <menu className="absolute top-0 bottom-0 flex flex-col left-0 w-full  bg-black">
-      <div className="h-[6rem] w-full flex items-center justify-between px-6 md:px-12 shadow-xl shadow-white/20">
+    <menu className="absolute top-0 right-0 bottom-0 left-0 bg-black">
+      <header className="h-24 md:h-32 flex items-center justify-between px-6 md:px-12 shadow-xl shadow-white/20">
         <Link href="/">
           <Image
             src={ logo }
             alt="Logo"
             width='50'
-            className="mr-3"
+            className="mr-3 md:h-20 md:w-20"
           />
         </Link>
         <IoMdClose 
-          className="text-red-100 text-4xl md:text-5xl animate-pulse lg:hidden" 
+          className="text-red-100 text-4xl md:text-5xl md:text-5xl animate-pulse lg:hidden" 
           onClick={ handleClick }
         />
-      </div>
-      <nav className="flex justify-center h-full">
-          <ul className="flex flex-col items-center pt-12 px-16 md:px-24 w-fit bg-red-200/40 border-x border-white">
+      </header>
+      <nav className="flex justify-center h-[calc(100%-6rem)] h-[calc(100%-8rem)]">
+          <ul className="flex flex-col items-center pt-12 px-16 md:px-24 bg-red-200/40 border-x border-white">
             {
               navRoutes.map((route, index) => (
                 <motion.li 
