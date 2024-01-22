@@ -14,7 +14,7 @@ export default function Typewriter() {
   })
 
   return (
-    <div className="block text-center mt-2 md:mt-3 md:text-2xl text-gray-100">
+    <div className="block text-center mt-2 md:mt-3 text-sm md:text-md xl:text-xl text-gray-100">
       { text }
        <Cursor />
     </div>

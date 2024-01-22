@@ -20,16 +20,16 @@ export default function Menu({ handleClick, pathname }: Props) {
             src={ logo }
             alt="Logo"
             width='50'
-            className="mr-3 md:h-20 md:w-20"
+            className="mr-3 md:h-16 md:w-16"
           />
         </Link>
         <IoMdClose 
-          className="text-red-100 text-4xl md:text-5xl md:text-5xl animate-pulse lg:hidden" 
+          className="text-red-100 text-3xl md:text-4xl animate-pulse lg:hidden" 
           onClick={ handleClick }
         />
       </header>
-      <nav className="flex justify-center h-[calc(100%-6rem)] h-[calc(100%-8rem)]">
-          <ul className="flex flex-col items-center pt-12 px-16 md:px-24 bg-red-200/40 border-x border-white">
+      <nav className="flex justify-center h-[calc(100%-6rem)] md:h-[calc(100%-8rem)]">
+          <ul className="flex flex-col items-center h-full pt-12 px-16 md:px-24 bg-red-200/40 border-x border-white">
             {
               navRoutes.map((route, index) => (
                 <motion.li 
@@ -53,7 +53,7 @@ export default function Menu({ handleClick, pathname }: Props) {
                   >
                     <span className={`
                       ${pathname === route.link ? 'active' : 'text-white' }
-                      text-md md:text-2xl transition hover:text-red-100 md:p-4`}
+                      text-base md:text-lg transition hover:text-red-100 md:p-4`}
                     >
                       { route.name }
                     </span>

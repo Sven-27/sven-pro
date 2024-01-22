@@ -16,7 +16,7 @@
   }
 
   .star{
-    @apply text-[3rem] md:text-[4rem] text-red-100 animate-pulse;
+    @apply text-4xl md:text-5xl text-red-100 animate-pulse;
   }
 
   .chevron{
@@ -26,7 +26,7 @@
 
 @layer components {
   .btn {
-    @apply flex justify-center mt-12 md:mt-24 text-white font-semibold p-[1px] rounded-xl bg-to-bottom;
+    @apply flex justify-center mx-auto mt-16 md:mt-24 text-white font-semibold p-[1px] w-fit rounded-xl bg-to-bottom;
   }
 }
 

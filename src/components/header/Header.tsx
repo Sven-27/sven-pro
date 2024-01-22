@@ -20,21 +20,20 @@ function Header() {
         href="/"
         className={`${pathname === '/' ? 'cursor-default' : 'text-white' } h-fit flex items-center`}
       >
-          <Image
-            src={ logo }
-            alt="Logo"
-            width='50'
-            className="mr-3 md:mr-5 md:h-16 md:w-16"
-          />
-          <h3 className="uppercase font-ro text-2xl md:text-4xl text-white">
-            <span className="text-red-100">sven</span>-pro
-          </h3>
-        </ Link>
-      {/* <div> */}
+        <Image
+          src={ logo }
+          alt="Logo"
+          width='50'
+          className="mr-3 md:mr-5 md:h-12 md:w-12"
+        />
+        <h3 className="uppercase font-ro text-xl md:text-2xl text-white">
+          <span className="text-red-100">sven</span>-pro
+        </h3>
+      </ Link>
       <nav
         className="flex items-center justify-between"
       >
-            <RxHamburgerMenu className="text-red-100 text-4xl md:text-5xl lg:hidden"  onClick={() => setIsNavOpen((prev) => !prev)}/>
+            <RxHamburgerMenu className="text-red-100 text-3xl md:text-4xl lg:hidden"  onClick={() => setIsNavOpen((prev) => !prev)}/>
         <div className="flex lg:none bg-black">
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}> {/* if isNavOpen state is true, show the menu */}
             <Menu 
@@ -48,7 +47,7 @@ function Header() {
               <li key={ index }>
                 <Link 
                   href={ route.link } 
-                  className={`${pathname === route.link ? 'active' : 'text-white' } text-md transition hover:text-red-100`}
+                  className={`${pathname === route.link ? 'active' : 'text-white' } text-sm transition hover:text-red-100`}
                 >
                   { route.name }
                 </Link>
