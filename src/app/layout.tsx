@@ -7,7 +7,6 @@ import {
 } from 'next/font/google';
 import '@/app/globals.css';
 import Header from '@/components/header/Header';
-import Particles from '@/components/particles/Particles';
 
 const raleway = Raleway({ 
   weight: ['400', '500', '600', '700'],
@@ -53,8 +52,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`container bg-transparent relative flex flex-col min-h-screen ${raleway.className} ${robotoCondensed.variable} ${reggaeOne.variable} ${kaushanScript.variable}` }>
-        <Particles /> 
+      <body className={`bg-transparent relative flex flex-col min-h-screen ${raleway.className} ${robotoCondensed.variable} ${reggaeOne.variable} ${kaushanScript.variable}` }>
         <Header />
         { children }
       </body>

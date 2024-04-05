@@ -15,7 +15,7 @@ function Header() {
    const [isNavOpen, setIsNavOpen] = useState<Boolean>(false); // initiate isNavOpen state with false
 
   return (
-    <header className="font-rw w-full min-h-[6rem] md:py-8  flex items-center justify-between z-3">
+    <header className="fixed font-rw w-full min-h-[6rem] p-4 md:p-8 flex items-center justify-between z-3 bg-white">
       <Link 
         href="/"
         className={`${pathname === '/' ? 'cursor-default' : 'text-white' } h-fit flex items-center`}
@@ -26,9 +26,7 @@ function Header() {
           width='50'
           className="mr-3 md:mr-5 md:h-12 md:w-12"
         />
-        <h3 className="uppercase font-ro text-xl md:text-2xl text-white">
-          <span className="text-red-100">sven</span>-pro
-        </h3>
+        <h3 className="uppercase font-ro text-xl md:text-2xl text-red-100">sven-pro</h3>
       </ Link>
       <nav
         className="flex items-center justify-between"

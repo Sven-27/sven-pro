@@ -16,17 +16,17 @@
   }
 
   .star{
-    @apply text-4xl md:text-5xl text-red-100 animate-pulse;
+    @apply text-4xl md:text-5xl text-red-100;
   }
 
   .chevron{
-    @apply text-red-100 md:text-3xl animate-pulse;
+    @apply text-red-100 md:text-3xl;
   }
 }
 
 @layer components {
   .btn {
-    @apply flex justify-center mx-auto mt-16 md:mt-24 text-white font-semibold p-[1px] w-fit rounded-xl bg-to-bottom;
+    @apply flex justify-center mx-auto mt-16 md:mt-24 text-red-100 font-semibold p-[1px] w-fit rounded-xl bg-to-bottom;
   }
 }
 
@@ -56,7 +56,7 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background: transparent;
+  /* background: transparent; */
   z-index: 10;
   display: flex;
   flex-direction: column;

@@ -10,7 +10,7 @@ import SvenPro from '../../public/img/sven-20231.jpg';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center xl:flex-row xl:flex-row xl:justify-evenly xl:flex-grow">
+    <main className="flex flex-col items-center w-screen h-screen justify-center xl:flex-row xl:flex-row xl:justify-evenly xl:flex-grow bg-red-200">
       <Image
         src={image}
         alt="Picture of the author"
@@ -51,7 +51,7 @@ export default function Home() {
         href="/contact" 
         className="btn"
       >
-        <span className="py-3 px-4 md:py-5 md:px-6 bg-black rounded-xl text-sm md:text-lg tracking-widest">
+        <span className="py-3 px-4 md:py-5 md:px-6 bg-white rounded-xl text-sm md:text-lg tracking-widest">
          Contact Me 
         </span>
       </Link>
