@@ -10,18 +10,14 @@ import SvenPro from '../../public/img/sven-20231.jpg';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center w-screen h-screen justify-center xl:flex-row xl:flex-row xl:justify-evenly xl:flex-grow bg-red-200">
+    <div className="flex flex-row">
+    <main className="flex flex-col items-center w-[55%] h-screen justify-center xl:justify-evenly xl:flex-grow bg-red-100 relative diagonal">
       <Image
         src={image}
         alt="Picture of the author"
         width={120}
         height={120}
-        className="rounded-full border border-white mt-8 md:mt-16 md:w-44 md:h-44 xl:hidden" 
-      />
-      <Image
-        src={SvenPro}
-        alt="Picture of the author"
-        className="hidden w-[35rem] xl:flex rounded-3xl border border-white" 
+        className="rounded-full border border-white mt-8 md:mt-16 md:w-44 md:h-44" 
       />
       <div>
       <h1 className="text-white font-bold text-center text-3xl md:text-5xl xl:text-7xl mt-12 md:mt-16 xl:mt-0">
@@ -57,5 +53,15 @@ export default function Home() {
       </Link>
       </div>
     </main>
+    <section className="w-[45%] h-screen bg-red-200">
+       <Image
+        src={image}
+        alt="Picture of the author"
+        width={120}
+        height={120}
+        className="rounded-full border border-white mt-8 md:mt-16 md:w-44 md:h-44" 
+      />
+      </section>
+      </div>
   )
 }

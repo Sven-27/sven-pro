@@ -43,6 +43,13 @@
   .overlay {
     @apply  inset-0 bg-black opacity-70;
   }
+  .clip-triangle{
+    clip-path: polygon(100% 3%, 0 100%, 100% 100%);
+  }
+
+  .diagonal{
+    @apply after:absolute after:clip-triangle after:top-0 after:right-0 after:w-[20%] after:h-full after:bg-red-200 after:z-10;
+  }
 }
 
 .hideMenuNav {

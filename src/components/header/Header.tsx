@@ -15,7 +15,7 @@ function Header() {
    const [isNavOpen, setIsNavOpen] = useState<Boolean>(false); // initiate isNavOpen state with false
 
   return (
-    <header className="fixed font-rw w-full min-h-[6rem] p-4 md:p-8 flex items-center justify-between z-3 bg-white">
+    <header className="fixed font-rw w-full min-h-[6rem] p-4 md:p-8 flex items-center justify-between z-20 bg-white ">
       <Link 
         href="/"
         className={`${pathname === '/' ? 'cursor-default' : 'text-white' } h-fit flex items-center`}
@@ -45,7 +45,7 @@ function Header() {
               <li key={ index }>
                 <Link 
                   href={ route.link } 
-                  className={`${pathname === route.link ? 'active' : 'text-white' } text-sm transition hover:text-red-100`}
+                  className={`${pathname === route.link ? 'active' : 'text-gray-300' } font-semibold text-sm transition hover:text-red-100`}
                 >
                   { route.name }
                 </Link>
