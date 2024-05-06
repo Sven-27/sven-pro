@@ -6,12 +6,15 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
 import image from '../../public/img/sven-small.jpg';
-import SvenPro from '../../public/img/sven-20231.jpg';
 
 export default function Home() {
   return (
-    <div className="flex flex-row">
-    <main className="flex flex-col items-center w-[55%] h-screen justify-center xl:justify-evenly xl:flex-grow bg-red-100 relative diagonal">
+    <div className="flex flex-row relative">
+     <video autoPlay muted loop id="myVideo" className="absolute top-0 right-0 bottom-0 left-0">
+      <source src="/media/earth.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <main className="flex flex-col items-center h-screen justify-center xl:justify-evenly xl:flex-grow">
       <Image
         src={image}
         alt="Picture of the author"
@@ -53,7 +56,7 @@ export default function Home() {
       </Link>
       </div>
     </main>
-    <section className="w-[45%] h-screen bg-red-200">
+    <section className="h-screen bg-red-200">
        <Image
         src={image}
         alt="Picture of the author"
