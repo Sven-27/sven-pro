@@ -30,6 +30,7 @@ const config: Config = {
       "gray-200": "#6D6D6D",
       "gray-300": "#242424",
       "black": "#000",
+      "black-opacity": "rgba(0, 0, 0, .8)",
     },
     fontFamily: {
       "rw": "var(--raleway)",

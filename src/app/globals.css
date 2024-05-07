@@ -12,7 +12,7 @@
   }
 
   .active{
-    @apply text-red-100 underline underline-offset-8 cursor-default animate-pulse;
+    @apply text-red-100 font-extrabold cursor-default;
   }
 
   .star{
@@ -50,6 +50,7 @@
   .diagonal{
     @apply after:absolute after:clip-triangle after:top-0 after:right-0 after:w-[20%] after:h-full after:bg-red-200 after:z-10;
   }
+
 }
 
 .hideMenuNav {
@@ -88,3 +89,5 @@
   -webkit-text-stroke: 1px red;
   text-stroke: 1px red;
 }
+
+

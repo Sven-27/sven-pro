@@ -4,24 +4,22 @@ import Typewriter from '@/components/typewriter/Typewriter';
 import { TiStar } from "react-icons/ti";
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Link from 'next/link';
-import Image from 'next/image';
-import image from '../../public/img/sven-small.jpg';
 
 export default function Home() {
   return (
-    <div className="flex flex-row relative">
-     <video autoPlay muted loop id="myVideo" className="absolute top-0 right-0 bottom-0 left-0">
+    <div className="flex flex-row relative overflow-hidden before:absolute before:block before:content-[''] before:-z-5 before:inset-0 b before:bg-black-opacity">
+     <video autoPlay muted loop id="myVideo" className="absolute inset-0 -z-10 object-cover object-center">
       <source src="/media/earth.mp4" type="video/mp4" />
       Your browser does not support HTML5 video.
     </video>
-    <main className="flex flex-col items-center h-screen justify-center xl:justify-evenly xl:flex-grow">
-      <Image
+    <main className="flex flex-col items-center h-screen justify-center xl:justify-evenly xl:flex-grow z-10">
+      {/* <Image
         src={image}
         alt="Picture of the author"
         width={120}
         height={120}
         className="rounded-full border border-white mt-8 md:mt-16 md:w-44 md:h-44" 
-      />
+      /> */}
       <div>
       <h1 className="text-white font-bold text-center text-3xl md:text-5xl xl:text-7xl mt-12 md:mt-16 xl:mt-0">
         I am Sven Notermans
@@ -48,23 +46,14 @@ export default function Home() {
       </Link>
       <Link 
         href="/contact" 
-        className="btn"
+        className="flex justify-center "
       >
-        <span className="py-3 px-4 md:py-5 md:px-6 bg-white rounded-xl text-sm md:text-lg tracking-widest">
+        <span className="px-8 py-4 h-full w-full bg-red-100 hover:bg-white hover:bg-opacity-10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 w-[50%] mt-24 text-center text-white">
          Contact Me 
         </span>
       </Link>
       </div>
     </main>
-    <section className="h-screen bg-red-200">
-       <Image
-        src={image}
-        alt="Picture of the author"
-        width={120}
-        height={120}
-        className="rounded-full border border-white mt-8 md:mt-16 md:w-44 md:h-44" 
-      />
-      </section>
       </div>
   )
 }
